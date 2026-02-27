@@ -20,6 +20,9 @@ app.use(cors(config.cors));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Serve static files (HTML pages)
+app.use(express.static('./public'));
+
 // Request logging
 app.use(requestLogger);
 
@@ -36,35 +39,41 @@ app.use('/api', rateLimitMiddleware);
  * @access  Public
  */
 app.get('/', (req: Request, res: Response) => {
-  const baseUrl = `${req.protocol}://${req.get('host')}`;
+  const accept = req.headers.accept || '';
   
-  res.json({
-    name: 'MangaPill API Scraper',
-    version: '2.0.0',
-    description: 'Comprehensive RESTful API for scraping manga data from MangaPill.com',
-    documentation: `${baseUrl}/api/docs`,
-    health: `${baseUrl}/health`,
-    repository: 'https://github.com/basirulakhlakborno/manga-scraper',
+  if (accept.includes('text/html')) {
+    res.sendFile('index.html', { root: 'public' });
+  } else {
+    const baseUrl = `${req.protocol}://${req.get('host')}`;
     
-    quickStart: {
-      homepage: `${baseUrl}/api/homepage`,
-      search: `${baseUrl}/api/search?q=naruto`,
-      mangaDetails: `${baseUrl}/api/manga/723`,
-      chapterPages: `${baseUrl}/api/chapter/723-10230000`,
-      recentChapters: `${baseUrl}/api/chapters/recent`
-    },
-    
-    features: [
-      'Full MangaPill coverage',
-      'Smart caching system',
-      'Auto retry with backoff',
-      'Rate limiting',
-      'TypeScript support',
-      'Modular architecture',
-      'Comprehensive logging',
-      'CORS enabled'
-    ]
-  });
+    res.json({
+      name: 'MangaPill API Scraper',
+      version: '2.0.0',
+      description: 'Comprehensive RESTful API for scraping manga data from MangaPill.com',
+      documentation: `${baseUrl}/api/docs`,
+      health: `${baseUrl}/health`,
+      repository: 'https://github.com/basirulakhlakborno/manga-scraper',
+      
+      quickStart: {
+        homepage: `${baseUrl}/api/homepage`,
+        search: `${baseUrl}/api/search?q=naruto`,
+        mangaDetails: `${baseUrl}/api/manga/723`,
+        chapterPages: `${baseUrl}/api/chapter/723-10230000`,
+        recentChapters: `${baseUrl}/api/chapters/recent`
+      },
+      
+      features: [
+        'Full MangaPill coverage',
+        'Smart caching system',
+        'Auto retry with backoff',
+        'Rate limiting',
+        'TypeScript support',
+        'Modular architecture',
+        'Comprehensive logging',
+        'CORS enabled'
+      ]
+    });
+  }
 });
 
 /**

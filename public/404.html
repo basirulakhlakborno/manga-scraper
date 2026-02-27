@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Manga Scraper</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+            max-width: 600px;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            color: #ff6b6b;
+        }
+        .hero h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+        .gif-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .gif-container img {
+            max-width: 250px;
+            height: auto;
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 500px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .gif-container img {
+                max-width: 180px;
+            }
+            .content {
+                padding: 20px;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 10px;">
+                <circle cx="12" cy="12" r="10" stroke="#fff" stroke-width="2"/>
+                <path d="M12 8V12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="12" cy="16" r="1" fill="#fff"/>
+            </svg>
+            404
+        </h1>
+        <h2>Page Not Found</h2>
+        <p>Sorry, the page you're looking for doesn't exist. This might be an API endpoint or the page has been moved.</p>
+    </div>
+    
+    <div class="gif-container">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHVnM215cmY5N2ZpZzNnZjh4MXFra2Q3d3Y4azJsZXl1dWkwZGhsOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IKFVtPf8jP6KJH16dB/giphy.gif" alt="Anime GIF">
+    </div>
+    
+    <div class="content">
+        <a href="https://github.com/basirulakhlakborno/manga-scraper" target="_blank" style="color: #4ecdc4; text-decoration: none; font-weight: bold; font-size: 1.2em;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;">
+            View on GitHub
+        </a>
+    </div>
+</body>
+</html>

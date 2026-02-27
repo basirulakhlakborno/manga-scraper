@@ -18,5 +18,11 @@ export function errorHandler(err: Error, req: Request, res: Response, next: Next
  * 404 Not Found handler
  */
 export function notFoundHandler(req: Request, res: Response): void {
-  res.status(404).json(errorResponse(`Endpoint not found: ${req.method} ${req.path}`));
+  const accept = req.headers.accept || '';
+  
+  if (accept.includes('text/html')) {
+    res.status(404).sendFile('404.html', { root: 'public' });
+  } else {
+    res.status(404).json(errorResponse(`Endpoint not found: ${req.method} ${req.path}`));
+  }
 }
