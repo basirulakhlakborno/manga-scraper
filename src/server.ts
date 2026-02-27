@@ -44,7 +44,7 @@ app.get('/', (req: Request, res: Response) => {
     description: 'Comprehensive RESTful API for scraping manga data from MangaPill.com',
     documentation: `${baseUrl}/api/docs`,
     health: `${baseUrl}/health`,
-    repository: 'https://github.com/yourusername/mangapill-scraper',
+    repository: 'https://github.com/basirulakhlakborno/manga-scraper',
     
     quickStart: {
       homepage: `${baseUrl}/api/homepage`,

@@ -528,4 +528,4 @@ curl -X GET "http://localhost:3000/api/manga/723"
 
 ---
 
-For more information, visit [GitHub Repository](https://github.com/yourusername/mangapill-scraper)
+For more information, visit [GitHub Repository](https://github.com/basirulakhlakborno/manga-scraper)

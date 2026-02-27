@@ -4,9 +4,9 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/mangapill-scraper)
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/yourusername/mangapill-scraper)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/mangapill-scraper)
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/basirulakhlakborno/manga-scraper)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/basirulakhlakborno/manga-scraper)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/basirulakhlakborno/manga-scraper)
 
 A **production-ready**, **enterprise-grade** RESTful API for scraping manga data from [MangaPill.com](https://mangapill.com). Built with TypeScript, Express, and modern best practices.
 
@@ -47,7 +47,7 @@ A **production-ready**, **enterprise-grade** RESTful API for scraping manga data
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mangapill-scraper.git
+git clone https://github.com/basirulakhlakborno/manga-scraper.git
 cd mangapill-scraper
 
 # Install dependencies
@@ -648,9 +648,9 @@ MIT License - see LICENSE file for details
 
 ## 📧 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/mangapill-scraper/issues)
+- **Issues**: [GitHub Issues](https://github.com/basirulakhlakborno/manga-scraper/issues)
 - **Documentation**: [API Docs](http://localhost:3000/api/docs)
-- **Email**: your.email@example.com
+- **Email**: basirulakhlakborno@gmail.com
 
 ## 🗺️ Roadmap
 
@@ -667,6 +667,6 @@ MIT License - see LICENSE file for details
 
 ---
 
-**Built with ❤️ by [Your Name]**
+**Built with ❤️ by Basirul Akhlak Borno**
 
 **Star ⭐ this repo if you find it helpful!**
