@@ -1,0 +1,474 @@
+{
+  "info": {
+    "name": "MangaPill API Scraper",
+    "description": "Complete collection of MangaPill API endpoints for testing and development",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health & Documentation",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["health"]
+            },
+            "description": "Check if the API server is running and healthy"
+          }
+        },
+        {
+          "name": "API Documentation",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/docs",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "docs"]
+            },
+            "description": "Get detailed API documentation with all endpoints"
+          }
+        },
+        {
+          "name": "Root - API Info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": ["{{baseUrl}}"],
+              "path": [""]
+            },
+            "description": "Get API overview and quick reference"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Homepage",
+      "item": [
+        {
+          "name": "Get Homepage Data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/homepage",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "homepage"]
+            },
+            "description": "Get homepage data including featured chapters, new chapters, trending manga, and latest news"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Manga",
+      "item": [
+        {
+          "name": "Get Manga Details - Chainsaw Man",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/manga/723",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "manga", "723"]
+            },
+            "description": "Get detailed information about Chainsaw Man (ID: 723)"
+          }
+        },
+        {
+          "name": "Get Manga Details - One Piece",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/manga/2",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "manga", "2"]
+            },
+            "description": "Get detailed information about One Piece (ID: 2)"
+          }
+        },
+        {
+          "name": "Get Manga Details - Berserk",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/manga/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "manga", "1"]
+            },
+            "description": "Get detailed information about Berserk (ID: 1)"
+          }
+        },
+        {
+          "name": "Get New Manga - Page 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/manga/new?page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "manga", "new"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Get newly added manga (first page)"
+          }
+        },
+        {
+          "name": "Get Random Manga",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/manga/random",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "manga", "random"]
+            },
+            "description": "Get a random manga recommendation"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Chapters",
+      "item": [
+        {
+          "name": "Get Chapter Pages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/chapter/723-10230000",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "chapter", "723-10230000"]
+            },
+            "description": "Get all page images for Chainsaw Man Chapter 230"
+          }
+        },
+        {
+          "name": "Get Recent Chapters - Page 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/chapters/recent?page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "chapters", "recent"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Get recently released chapters (first page)"
+          }
+        },
+        {
+          "name": "Get Recent Chapters - Page 2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/chapters/recent?page=2",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "chapters", "recent"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "2"
+                }
+              ]
+            },
+            "description": "Get recently released chapters (second page)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "item": [
+        {
+          "name": "Search - Naruto",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/search?q=naruto&page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "naruto"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Search for manga with 'naruto' in the title"
+          }
+        },
+        {
+          "name": "Search - One Piece",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/search?q=one+piece&page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "one piece"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Search for One Piece manga"
+          }
+        },
+        {
+          "name": "Search - Attack on Titan",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/search?q=attack+on+titan&page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "attack on titan"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Search for Attack on Titan manga"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Advanced Search",
+      "item": [
+        {
+          "name": "Advanced Search - Action Genre",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/search/advanced?genres=Action&page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "search", "advanced"],
+              "query": [
+                {
+                  "key": "genres",
+                  "value": "Action"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Search for manga with Action genre"
+          }
+        },
+        {
+          "name": "Advanced Search - Action & Adventure",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/search/advanced?genres=Action,Adventure&status=publishing&page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "search", "advanced"],
+              "query": [
+                {
+                  "key": "genres",
+                  "value": "Action,Adventure"
+                },
+                {
+                  "key": "status",
+                  "value": "publishing"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Search for currently publishing manga with Action and Adventure genres"
+          }
+        },
+        {
+          "name": "Advanced Search - Romance Publishing",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/search/advanced?genres=Romance&status=publishing&type=manga&page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "search", "advanced"],
+              "query": [
+                {
+                  "key": "genres",
+                  "value": "Romance"
+                },
+                {
+                  "key": "status",
+                  "value": "publishing"
+                },
+                {
+                  "key": "type",
+                  "value": "manga"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Search for currently publishing Romance manga"
+          }
+        },
+        {
+          "name": "Advanced Search - Finished Manga",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/search/advanced?status=finished&page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "search", "advanced"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "finished"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Search for finished/completed manga"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Genre Search",
+      "item": [
+        {
+          "name": "Genre - Action",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/genre/Action?page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "genre", "Action"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Get Action manga"
+          }
+        },
+        {
+          "name": "Genre - Romance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/genre/Romance?page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "genre", "Romance"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Get Romance manga"
+          }
+        },
+        {
+          "name": "Genre - Fantasy",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/genre/Fantasy?page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "genre", "Fantasy"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Get Fantasy manga"
+          }
+        },
+        {
+          "name": "Genre - Horror",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/genre/Horror?page=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "genre", "Horror"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            },
+            "description": "Get Horror manga"
+          }
+        }
+      ]
+    }
+  ]
+}
